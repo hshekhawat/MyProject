@@ -1,0 +1,420 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>National Crusher|about</title>
+    <!--meta tags -->
+
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!--//meta tags ends here-->
+    <!--booststrap-->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/fontawesome-all.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/style.css" rel='stylesheet' type='text/css' media="all" />
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet" />
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet" />
+     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
+
+    <style>
+       
+
+        /* Bootstrap Lightbox using Modal */
+
+        #profile-grid {
+            overflow: auto;
+            white-space: normal;
+        }
+
+            #profile-grid .profile {
+                padding-bottom: 40px;
+            }
+
+            #profile-grid .panel {
+                padding: 0;
+            }
+
+            #profile-grid .panel-body {
+                padding: 15px;
+            }
+
+            #profile-grid .profile-name {
+                font-weight: bold;
+            }
+
+            #profile-grid .thumbnail {
+                margin-bottom: 6px;
+            }
+
+            #profile-grid .panel-thumbnail {
+                overflow: hidden;
+            }
+
+            #profile-grid .img-rounded {
+                border-radius: 4px 4px 0 0;
+            }
+   
+#slider {
+    height:350px;
+    width:100%;
+	margin:auto;
+    overflow:hidden;
+    background:#CCC;
+}
+
+.slide {
+    height:350px;
+    float:left;
+    text-align:center;
+    border:1PX SOLID #000;
+	line-height:8em;
+	font-size:40px;
+}
+</style>
+
+</head>
+<body>
+    <!--headder-->
+    <div class="header-outs">
+        <!--banner -->
+        <div class="header-most-top" id="header">
+        </div>
+        <!-- //Navigation -->
+    </div>
+    <!--//headder-->
+    <!-- banner -->
+    <div class="inner_page-banner one-img">
+    </div>
+    <!--//banner -->
+    <!-- short -->
+    <div class="using-border py-3">
+        <div class="inner_breadcrumb  ml-4">
+            <ul class="short_ls">
+                <li>
+                    <a href="index.html">Home</a>
+                    <span>/ /</span>
+                </li>
+                <li>Product</li>
+            </ul>
+        </div>
+    </div>
+    <!-- //short-->
+    <!--about-->
+    <!--about-one-->
+    <section class="about-inner py-lg-4 py-md-3 py-sm-3 py-3">
+        <div class="container-fluid py-lg-5 py-md-4 py-sm-4 py-3">
+            <div class="title text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3" id="mainproduct">
+            </div>
+            <div class="row" id="subPro">
+            </div>
+        </div>
+    </section>
+    <!--//about-->
+    <!--Fun-facts-->
+    <div class="header-outs">
+        <section class="fun-facts py-lg-4 py-md-3 py-sm-3 py-3">
+            <div class="container py-lg-5 py-md-5 py-sm-4 py-3">
+                <div class="row">
+                    <div class="col-lg-4 funt-list-grids">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-4 col-4 funt-agile-grids text-right">
+                                <h6>01</h6>
+                            </div>
+                            <div class="col-md-8 col-sm-8 col-8 funt-agile-text text-left">
+                                <h4 class="mb-3">Quality Work</h4>
+                                <p>Always gives the quality product</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 funt-list-grids">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-4 col-4 funt-agile-grids text-right">
+                                <h6>02</h6>
+                            </div>
+                            <div class="col-md-8 col-sm-8 col-8 funt-agile-text text-left">
+                                <h4 class="mb-3">New Ideas</h4>
+                                <p>create the product as you want</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 funt-list-grids">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-4 col-4 funt-agile-grids text-right">
+                                <h6>03</h6>
+                            </div>
+                            <div class="col-md-8 col-sm-8 col-8 funt-agile-text text-left">
+                                <h4 class="mb-3">Innovation</h4>
+                                <p>Beleives in innovation of Products</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+            <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+    <div id="slider">
+    <div id="slide-container" class="imgslider">
+                     
+    </div>
+</div>
+   <div id="footer"></div>
+    <!-- //Footer -->
+    <!--js working-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        //you can set this, as long as it's not greater than the slides length
+        Showgallery();
+        var show = 4;
+        var w = $('#slider').width() / show;
+        var l = $('.slide').length;
+
+        $('.slide').width(w);
+        $('#slide-container').width(w * l)
+
+        function slider() {
+            $('.slide:first-child').animate({
+                marginLeft: -w
+            }, 'slow', function () {
+                $(this).appendTo($(this).parent()).css({ marginLeft: 0 });
+            });
+        }
+        var timer = setInterval(slider, 2000);
+
+        $('#slider').hover(function () {
+            clearInterval(timer);
+        }, function () {
+            timer = setInterval(slider, 2000);
+        });
+        function Showgallery() {
+            $.ajax({
+                type: "POST",
+                url: "slider.asmx/GetSlider",
+                data: "{}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                async: false,
+                success: function (r) {
+                    if (r.d.length > 0) {
+                        var xmlDoc = $.parseXML(r.d);
+                        var xml = $(xmlDoc);
+                        var docs = xml.find("slider");
+                        var cartd = [];
+                        $.each(docs, function (i, docs) {
+
+                            cartd.push("<div class='slide'>");
+                            cartd.push("<img  src='admin/" + ($(docs).find("SubPimage").text()) + "' alt='image' height='345' width='370'  />");
+                            cartd.push("</div>");
+                        });
+                        $(".imgslider").html(cartd.join(''));
+                    }
+                },
+                failure: function (response) {
+                    alert(response.d + "Fail");
+                },
+                error: function (response) {
+                    alert(response.d + "Error...");
+                }
+            });
+        }
+
+    });
+</script>
+    <script src='js/jquery-2.2.3.min.js'></script>
+        
+    <!--//js working-->
+    <!--Nav script scrollon-->
+    <script>
+        $(window).scroll(function () {
+            if ($(document).scrollTop() > 150) {
+                $('nav.pagescrollfix,nav.RWDpagescrollfix').addClass('shrink');
+            } else {
+                $('nav.pagescrollfix,nav.RWDpagescrollfix').removeClass('shrink');
+            }
+        });
+    </script>
+    <!--//Nav script scrollon-->
+    <!-- start-smoth-scrolling -->
+    <script src="js/move-top.js"></script>
+    <script src="js/easing.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 900);
+            });
+        });
+    </script>
+    <!-- start-smoth-scrolling -->
+    <!-- here stars scrolling icon -->
+    <script>
+        $(document).ready(function () {
+            function currentDiv(n) {
+                showDivs(slideIndex = n);
+            }
+
+            function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("demo");
+                if (n > x.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = x.length }
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+                }
+                x[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " w3-opacity-off";
+            }
+            var defaults = {
+                containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear'
+            };
+
+
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+            });
+
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#header").load('header.html');
+            $("#footer").load('Footer.html');
+          
+            GetProduct();
+            GetSubProduct();
+        });
+    
+        function GetProduct() {
+            var pid = GetParameterValues('pid');
+            function GetParameterValues(param) {
+                var url = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+                for (var i = 0; i < url.length; i++) {
+                    var urlparam = url[i].split('=');
+                    if (urlparam[0] == param) {
+                        return urlparam[1];
+                    }
+                }
+            }
+            $.ajax({
+                type: "POST", url: "MainProduct.asmx/GetMainProduct",
+                data: "{'ProductId':" + pid + "}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                async: false,
+                success: function (r) {
+                    if (r.d.length > 0) {
+                        var xmlDoc = $.parseXML(r.d);
+                        var xml = $(xmlDoc);
+                        var docs = xml.find("ProductDetail");
+                        var cartd = [];
+                        $.each(docs, function (i, docs) {
+                            cartd.push("<img style='height:100px; width:100px' src='admin/" + ($(docs).find("ProductImage").text()) + "' alt='image' class='img-fluid mb-4'  />");
+                            cartd.push(" <h3>" + ($(docs).find("ProductName").text()) + "</h3>");
+                            cartd.push("  <p style='text-align:justify;'>" + ($(docs).find("ProductDesc").text()) + "</p>");
+                        });
+                        $("#mainproduct").html(cartd.join(''));
+                    }
+                },
+                failure: function (response) {
+                    alert(response.d + "Fail");
+                },
+                error: function (response) {
+                    alert(response.d + "Error...");
+                }
+            });
+
+        }
+
+        function GetSubProduct() {
+            var pid = GetParameterValues('pid');
+            function GetParameterValues(param) {
+                var url = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+                for (var i = 0; i < url.length; i++) {
+                    var urlparam = url[i].split('=');
+                    if (urlparam[0] == param) {
+                        return urlparam[1];
+                    }
+                }
+            }
+            $.ajax({
+                type: "POST", url: "MainProduct.asmx/GetSubMainProduct",
+                data: "{'ProductId':" + pid + "}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                async: false,
+                success: function (r) {
+                    if (r.d.length > 0) {
+                        var xmlDoc = $.parseXML(r.d);
+                        var xml = $(xmlDoc);
+                        var docs = xml.find("SubProductDetail");
+                        var cartd = [];
+                        $.each(docs, function (i, docs) {
+                            cartd.push("<div class='col-lg-4 col-md-4 w3layouts-right-side-img'>");
+                            cartd.push("<div class='w3layouts-left-side-img'>");
+                            cartd.push("<img style='height:200px; width:500px' src='admin/" + ($(docs).find("SubPimage").text()) + "' alt='image' class='img-fluid'  />");
+                            cartd.push("</div>");
+                            cartd.push("<div class='abut-inner-wls-head'>");
+                            cartd.push("<h4 class='py-3' style='text-align:center'>" + ($(docs).find("SubPname").text()) + "</h4>");
+                            cartd.push("<p style='text-align:justify;'>" + ($(docs).find("SubPdesc").text()) + "</p>");
+                            cartd.push("</div> </div>");
+
+                        });
+                        $("#subPro").html(cartd.join(''));
+                    }
+                },
+                failure: function (response) {
+                    alert(response.d + "Fail");
+                },
+                error: function (response) {
+                    alert(response.d + "Error...");
+                }
+            });
+
+        }
+
+
+    </script>
+    <!-- //here ends scrolling icon -->
+    <!--bootstrap working-->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- //bootstrap working-->
+</body>
+</html>
+
+<script language="javascript">
+   
+
+
+    $(document).ready(function () {
+        /* show lightbox when clicking a thumbnail */
+        $('a.thumb').click(function (event) {
+            event.preventDefault();
+            var content = $('.modal-body');
+            content.empty();
+            var title = $(this).attr("title");
+            $('.modal-title').html(title);
+            content.html($(this).html());
+            $(".modal-profile").modal({ show: true });
+        });
+
+    });
+</script>

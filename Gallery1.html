@@ -1,0 +1,296 @@
+﻿
+<!DOCTYPE html>
+<html lang="zxx">
+   <head>
+     <title>National Crusher Manufacturing Company</title>
+	
+      <!--meta tags -->
+      <meta charset="UTF-8">
+     <style>
+#slider {
+    height:350px;
+    width:100%;
+	margin:auto;
+    overflow:hidden;
+}
+
+.slide {
+    height:350px;
+    float:left;
+    text-align:center;
+    /*border:1PX SOLID #000;*/
+	line-height:8em;
+	font-size:40px;
+}
+#slider1 {
+    height:350px;
+    width:100%;
+	margin:auto;
+    overflow:hidden;
+}
+
+.slide1 {
+    height:350px;
+    float:left;
+    text-align:center;
+    /*border:1PX SOLID #000;*/
+	line-height:8em;
+	font-size:40px;
+}
+</style>
+       
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        //you can set this, as long as it's not greater than the slides length
+        var show = 3;
+        var w = $('#slider').width() / show;
+        var l = $('.slide').length;
+
+        $('.slide').width(w);
+        $('#slide-container').width(w * l)
+
+        function slider() {
+            $('.slide:first-child').animate({
+                marginLeft: -w
+            }, 'slow', function () {
+                $(this).appendTo($(this).parent()).css({ marginLeft: 0 });
+            });
+        }
+        var timer = setInterval(slider, 2000);
+
+        $('#slider').hover(function () {
+            clearInterval(timer);
+        }, function () {
+            timer = setInterval(slider, 2000);
+        });
+        var shower = 3;
+        var wid = $('#slider1').width() / show;
+        var len = $('.slide1').length;
+
+        $('.slide1').width(wid);
+        $('#slide-container1').width(wid *len)
+
+        function slider1() {
+            $('.slide1:first-child').animate({
+                marginLeft: -wid
+            }, 'slow', function () {
+                $(this).appendTo($(this).parent()).css({ marginLeft: 0 });
+            });
+        }
+        var timer = setInterval(slider1, 2000);
+
+        $('#slider1').hover(function () {
+            clearInterval(timer);
+        }, function () {
+            timer = setInterval(slider1, 2000);
+        });
+
+    });
+</script>
+      <script>
+          addEventListener("load", function () {
+              setTimeout(hideURLbar, 0);
+          }, false);
+
+          function hideURLbar() {
+              window.scrollTo(0, 1);
+          }
+      </script>
+      <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+      <link href="css/fontawesome-all.min.css" rel="stylesheet" type="text/css" media="all">
+      <link rel="stylesheet" href="css/lightbox.css">
+      <link rel="stylesheet" type="text/css" href="css/set1.css" />
+      <link href="css/style.css" rel='stylesheet' type='text/css' media="all">
+      <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+      <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+   </head>
+   <body>
+    <div class="header-outs" >
+           <div class="header-most-top" id="header">
+         </div>
+      </div>
+      <div class="inner_page-banner one-img">
+      </div>
+      <div class="using-border py-3">
+         <div class="inner_breadcrumb  ml-4">
+            <ul class="short_ls">
+               <li>
+                  <a href="index.html">Home</a>
+                  <span>/ /</span>
+               </li>
+               <li>Gallery</li>
+            </ul>
+         </div>
+      </div>
+      <section class="gallery py-lg-4 py-md-3 py-sm-3 py-3">
+         <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
+            <div class="title text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">
+               <h3> NATIONAL CRUSHER</h3>
+            </div>
+            <h3 style="text-align:left;font-weight:bold;" >SUB PRODUCTS</h3>
+             <div id="slider" class="row grid gallery-info"  >
+               
+                 <div id="slide-container" class="imggallery"> 
+                        
+                     </div>
+                
+                </div>
+               <h3 style="text-align:left;font-weight:bold;" >OUR GALLERY</h3>
+              <div class="row grid gallery-info" id="national">
+                
+            </div>
+             <h3 style="text-align:left;font-weight:bold;" >SERVICES</h3>
+             <div id="slider1" class="row grid gallery-info"  >
+               
+                 <div id="slide-container1" class="imggallery1"> 
+                        
+                     </div>
+                
+                </div>
+             </div>
+      </section>
+       <div id="footer"></div>
+      <script src='js/jquery-2.2.3.min.js'></script>
+      <script>
+          $(window).scroll(function () {
+              if ($(document).scrollTop() > 150) {
+                  $('nav.pagescrollfix,nav.RWDpagescrollfix').addClass('shrink');
+              } else {
+                  $('nav.pagescrollfix,nav.RWDpagescrollfix').removeClass('shrink');
+              }
+          });
+      </script>
+      <script src="js/lightbox-plus-jquery.min.js"></script>
+      <script src="js/move-top.js"></script>
+      <script src="js/easing.js"></script>
+      <script>
+          jQuery(document).ready(function ($) {
+              $(".scroll").click(function (event) {
+                  event.preventDefault();
+                  $('html,body').animate({
+                      scrollTop: $(this.hash).offset().top
+                  }, 900);
+              });
+          });
+      </script>
+       <script>
+          $(document).ready(function () {
+              $("#header").load('header.html');
+              $("#footer").load('Footer.html');
+              ShowImg();
+              ShowImg1();
+              ShowImg3();
+              var defaults = {
+                  containerID: 'toTop', // fading element id
+                  containerHoverID: 'toTopHover', // fading element hover id
+                  scrollSpeed: 1200,
+                  easingType: 'linear'
+              };
+              $().UItoTop({
+                  easingType: 'easeOutQuart'
+              });
+              function ShowImg() {
+                  $.ajax({
+                      type: "POST",
+                      url: "slider.asmx/GetSlider",
+                      data: "{}",
+                      contentType: "application/json; charset=utf-8",
+                      dataType: "json",
+                      async: false,
+                      success: function (r) {
+                          if (r.d.length > 0) {
+                              var xmlDoc = $.parseXML(r.d);
+                              var xml = $(xmlDoc);
+                              var docs = xml.find("slider");
+                              var cartd = [];
+                              $.each(docs, function (i, docs)
+                              {
+            cartd.push("<div class='slide'>");
+                                  cartd.push("<img  src='admin/" + ($(docs).find("SubPimage").text()) + "' alt='image15' height='300px' width='350px'  />");
+                                 
+                                  cartd.push("</div>");
+                              });
+                              $(".imggallery").html(cartd.join(''));
+                          }
+                      },
+                      failure: function (response) {
+                          alert(response.d + "Fail");
+                      },
+                      error: function (response) {
+                          alert(response.d + "Error...");
+                      }
+                  });
+              }
+              function ShowImg1() {
+                  $.ajax({
+                      type: "POST",
+                      url: "slider1.asmx/GetSlider1",
+                      data: "{}",
+                      contentType: "application/json; charset=utf-8",
+                      dataType: "json",
+                      async: false,
+                      success: function (r) {
+                          if (r.d.length > 0) {
+                              var xmlDoc = $.parseXML(r.d);
+                              var xml = $(xmlDoc);
+                              var docs = xml.find("imgslide");
+                              var cartd = [];
+                              $.each(docs, function (i, docs) {
+                                  cartd.push("<div class='slide1'>");
+                                  cartd.push("<img  src='admin/" + ($(docs).find("ServiceImage").text()) + "' alt='image15' height='300px' width='350px'  />");
+
+                                  cartd.push("</div>");
+                              });
+                              $(".imggallery1").html(cartd.join(''));
+                          }
+                      },
+                      failure: function (response) {
+                          alert(response.d + "Fail");
+                      },
+                      error: function (response) {
+                          alert(response.d + "Error...");
+                      }
+                  });
+              }
+              function ShowImg3() {
+                  $.ajax({
+                      type: "POST",
+                      url: "Gallery.asmx/GetImages",
+                      data: "{}",
+                      contentType: "application/json; charset=utf-8",
+                      dataType: "json",
+                      async: false,
+                      success: function (r) {
+                          if (r.d.length > 0) {
+                              var xmlDoc = $.parseXML(r.d);
+                              var xml = $(xmlDoc);
+                              var docs = xml.find("pic");
+                              var cartd = [];
+                              $.each(docs, function (i, docs) {
+                                  cartd.push("<div class='col-lg-4 col-md-6 col-sm-6 gallery-grids'>");
+                                  cartd.push("<figure class='effect-goliath'>");
+                                  cartd.push("<img  src='admin/" + ($(docs).find("PicImage").text()) + "' alt='image' height='300px' width='350px'/>");
+                                  cartd.push("<figcaption>");
+                                  cartd.push("<h6>National<span>Crusher</span></h6>");
+                                  cartd.push("<p>We Manufacture Quality</p>");
+                                  cartd.push(" <a href='admin/" + ($(docs).find("PicImage").text()) + "' class='gallery-box' data-lightbox='example-set' data-title='' height='150px' width='150px'>");
+                                  cartd.push(" </a></figcaption>");
+                                  cartd.push(" </figure></div>");
+                              });
+                              $("#national").html(cartd.join(''));
+                          }
+                      },
+                      failure: function (response) {
+                          alert(response.d + "Fail");
+                      },
+                      error: function (response) {
+                          alert(response.d + "Error...");
+                      }
+                  });
+              }
+          });
+      </script>
+      <script src="js/bootstrap.min.js"></script>
+   </body>
+</html>
